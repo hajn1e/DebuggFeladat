@@ -109,19 +109,21 @@
             Console.Write("Add meg a termék nevét: ");
             string termek = Console.ReadLine();
 
-            int index = Array.IndexOf(raktarTermekek, termek);
+            int index = Array.IndexOf(raktarTermekek, termek); 
             if (index == -1)
             {
                 Console.WriteLine("Ez a termék nincs a raktárban! Hozzáadjuk!");
+
                 index = Array.IndexOf(raktarTermekek, null);
                 if (index == -1)
                 {
                     Console.WriteLine("Nincs több hely a raktárban");
-					
+					return;
 				}
-				return;
+				
 
 			}
+
 			raktarTermekek[index] = termek;
 			raktarMennyisegek[index] = 0;
 
@@ -133,9 +135,12 @@
                 Console.WriteLine("Hiba: negatív mennyiséget nem adhatsz hozzá!");
                 return;
             }
+            else {
+				raktarMennyisegek[index] += mennyiseg;
+				Console.WriteLine("A raktárkészlet frissítve!");
+			}
 
-            raktarMennyisegek[index] += mennyiseg;
-            Console.WriteLine("A raktárkészlet frissítve!");
+            
         }
 
         static void ListaMegtekintes()
