@@ -33,30 +33,38 @@
                 switch (opcio)
                 {
                     case 1:
+                        Console.Clear();
                         Hozzaadas();
                         break;
                     case 2:
-                        TermekTorlese();
+						Console.Clear();
+						TermekTorlese();
                         break;
                     case 3:
-                        RaktarFrissites();
+						Console.Clear();
+						RaktarFrissites();
                         break;
                     case 4:
-                        ListaMegtekintes();
+						Console.Clear();
+						ListaMegtekintes();
                         break;
                     case 5:
-                        RaktarMegtekintes();
+						Console.Clear();
+						RaktarMegtekintes();
                         break;
                     case 6:
-                        Vasarlas();
+						Console.Clear();
+						Vasarlas();
                         break;
                     case 7:
-                        Console.WriteLine("Kilépés...");
+						Console.Clear();
+						Console.WriteLine("Kilépés...");
                         fut = false;
                         break;
                     
                     default:
-                        Console.WriteLine("Érvénytelen opció!");
+						Console.Clear();
+						Console.WriteLine("Érvénytelen opció!");
                         break;
                 }
             }
